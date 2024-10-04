@@ -7,7 +7,7 @@ import './index.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <App className="container" />
+      <App className="container bg-slate-300 min-h-screen" />
     </BrowserRouter>
   </StrictMode>,
 )
