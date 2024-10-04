@@ -31,6 +31,7 @@ function Login() {
       <div className="min-h-screen flex items-center justify-center bg-cover bg-center">
         <div className="glass-effect p-8 rounded-lg w-full max-w-sm shadow-2xl shadow-green-400 z-10">
           <h1 className="text-center text-white font-bold text-4xl mb-6">Login</h1>
+          <NavLink to="../layout" className="block text-center text-slate-100 hover:underline">ToApp <span>beta version</span></NavLink>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="username" className="block text-slate-100 mb-1">Username</label>
