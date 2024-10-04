@@ -4,22 +4,50 @@ import VideoSection from '../components/VideoSection';
 import QuizSection from '../components/QuizSection';
 import ActivitySection from '../components/ActivitySection';
 import Navigation from '../components/Navigation';
-import FloatingBackground from "../components/FloatingBackgroundFolder/FloatingBackground";
+import FloatingBackground from '../components/FloatingBackgroundFolder/FloatingBackground';
 
 function Level1() {
   const [currentPage, setCurrentPage] = useState(0);
 
   const pages = [
-    // TODO LEVEL 1 VIDEO
-    <VideoSection videoUrl="https://www.youtube.com/watch?v=HLpP02TD6ek" videoWidth={1000} videoHeight={500} title='Life On Land' />,
-    // TODO LEVEL 1 QUIZ QUESTIONS
+    // Level 1 Video
+    <VideoSection
+      videoUrl="https://www.youtube.com/watch?v=HLpP02TD6ek"
+      videoWidth={800}
+      videoHeight={400}
+      title="Life On Land"
+    />,
+    // Level 1 Quiz Questions
     <QuizSection
       questions={[
-        { question: "What is biodiversity?", options: ["A", "B", "C", "D"], answer: "A" },
-        { question: "How can we protect forests?", options: ["A", "B", "C", "D"], answer: "B" },
+        {
+          question: 'What is biodiversity?',
+          options: ['Option A', 'Option B', 'Option C', 'Option D'],
+          correctAnswer: 0,
+        },
+        {
+          question: 'How can we protect forests?',
+          options: ['Option A', 'Option B', 'Option C', 'Option D'],
+          correctAnswer: 1,
+        },
+        {
+            question: 'How can we protect forests?',
+            options: ['Option A', 'Option B', 'Option C', 'Option D'],
+            correctAnswer: 1,
+        },
+        {
+            question: 'How can we protect forests?',
+            options: ['Option A', 'Option B', 'Option C', 'Option D'],
+            correctAnswer: 1,
+        },
       ]}
     />,
-    <ActivitySection activityContent="Write a short paragraph about how you can help protect wildlife in your community." />
+    // Activity Section with GDevelop activity
+<ActivitySection
+  activityName="Protecting Wildlife Activity"
+  activityUrl="https://anas-ibrahem.github.io/GAME/"
+/>,
+
   ];
 
   const nextPage = () => {
@@ -35,11 +63,16 @@ function Level1() {
       <NavBar />
       {/* Wrap the entire content inside FloatingBackground */}
       <FloatingBackground>
-        <div className="min-h-screen flex flex-col justify-center items-center">
-          <div className="p-8 w-full flex flex-col justify-center items-center">
+        <div className="h-full flex flex-col justify-center items-center  ">
+          <div className="p-0 m-0 w-full flex flex-col justify-center items-center">
             {pages[currentPage]}
           </div>
-          <Navigation onNext={nextPage} onPrev={prevPage} currentPage={currentPage} totalPages={pages.length} />
+          <Navigation
+            onNext={nextPage}
+            onPrev={prevPage}
+            currentPage={currentPage}
+            totalPages={pages.length}
+          />
         </div>
       </FloatingBackground>
     </>
