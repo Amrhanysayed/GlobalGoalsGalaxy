@@ -1,5 +1,9 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
+import Landing from '../components/Landing';
+import About from '../components/About';
+import Services from '../components/Services';
+import Contact from '../components/Contact';
 
 function Home () {
     return (
@@ -10,6 +14,10 @@ function Home () {
           </h1>
         </div> */}
         <NavBar/>
+        <Landing/>
+        <About/>
+        <Services/>
+        <Contact/>
         </>
     );
   };

@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/bg.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-} */
+
+html {
+  scroll-behavior: smooth;
+}
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
 
 /* .max-h-Custscreen{
 	max-height: 76vh;
