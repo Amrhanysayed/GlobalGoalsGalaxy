@@ -58,8 +58,8 @@ function SignUp() {
   };
 
   return (
-    <main className="bg-slate-100 max-h-screen ">
-      <div className="max-h-screen flex items-center justify-center bg-cover bg-center">
+    <main className="bg-slate-100 h-screen ">
+      <div className="h-screen flex items-center justify-center bg-cover bg-center">
         <div className="glass-effect m-2 p-4 rounded-lg w-full max-w-md shadow-2xl shadow-yellow-300 z-10">
           <h1 className="text-center text-white font-bold text-4xl mb-6">SignUp</h1>
           <form className="space-y-4" onSubmit={handleSubmit}>
