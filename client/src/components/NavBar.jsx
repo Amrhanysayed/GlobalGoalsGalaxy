@@ -17,7 +17,6 @@ export default function NavBar() {
     // },[])
     //    console.log(mobile)
     const [showMenu, setShowMenu] = useState(false);
-    console.log(showMenu)
    function handleBars(){
         setShowMenu(!showMenu);
 
@@ -28,10 +27,10 @@ return (
             <Logo className="w-[25%] lg:w-[20%]"/>
             <div className='flex justify-between basis-[80%] items-center'>
                  <ul className='hidden lg:flex basis-[50%] justify-evenly p-2 gap-4'>
-                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a>About</a> </li>
-                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-2 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a>Contact Us</a> </li>
-                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a>Services</a> </li>
-                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a>Help</a> </li>
+                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a href='#About'>About</a> </li>
+                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-2 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a href='#contact'>Contact Us</a> </li>
+                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a href='#Services'>Services</a> </li>
+                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a href='#contact'>Help</a> </li>
                     </ul>
                     <div className='flex gap-4 lg:ml-auto'>
                             <NavLink to="login"><button className='btn btn-accent mx-4 w-[100px]'> <LuLogIn /> Log in </button></NavLink>
