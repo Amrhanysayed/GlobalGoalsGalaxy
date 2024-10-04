@@ -33,8 +33,8 @@ return (
                             <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a href='#contact'>Help</a> </li>
                     </ul>
                     <div className='flex gap-4 lg:ml-auto'>
-                            <NavLink to="login"><button className='btn btn-accent mx-4 w-[100px]'> <LuLogIn /> Log in </button></NavLink>
-                            <NavLink to="signin"><button className='btn btn-primary mx-4 w-[100px]'> <IoMdPersonAdd /> Sign in </button></NavLink>
+                            <NavLink to="login"><button className='btn btn-accent mx-4 w-[120px]'> <LuLogIn /> Log in </button></NavLink>
+                            <NavLink to="signup"><button className='btn btn-primary mx-4 w-[120px]'> <IoMdPersonAdd /> Sign up </button></NavLink>
                     </div>
                     <button onClick={handleBars}><FaBars size={25} className='lg:hidden transition-colors duration-200 ease-in-out hover:text-yellow-300'/></button>  
             </div>
