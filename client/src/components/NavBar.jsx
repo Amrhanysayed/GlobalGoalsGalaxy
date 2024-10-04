@@ -42,10 +42,10 @@ return (
                     
                  <button onClick={handleBars}>   <ImCross size={20} className='m-3 absolute right-0 top-0 transition-colors duration-200 ease-in-out hover:text-yellow-300 ' /></button>
                     <ul className='flex flex-col p-4 gap-4'>
-                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a>About</a> </li>
-                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-2 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a>Contact Us</a> </li>
-                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a>Services</a> </li>
-                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a>Help</a> </li>
+                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'>  <a href='#About'>About</a>  </li>
+                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-2 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a href='#contact'>Contact Us</a> </li>
+                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a href='#Services'>Services</a> </li>
+                            <li className='font-semibold text-lg text-gray-800 hover:text-gray-900 transition-colors duration-200 ease-in-out px-3 py-2 rounded-lg hover:bg-red-200 cursor-pointer'> <a href='#contact'>Help</a> </li>
                     </ul>
             </div>
     </nav>
