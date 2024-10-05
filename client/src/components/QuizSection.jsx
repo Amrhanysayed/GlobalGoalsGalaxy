@@ -4,7 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaArrowLeft, FaArrowRight, FaCheck } from 'react-icons/fa';
 
-function QuizSection({ questions }) {
+function QuizSection({ title , questions }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState(Array(questions.length).fill(null));
   const [isQuizSubmitted, setIsQuizSubmitted] = useState(false);
@@ -46,12 +46,12 @@ function QuizSection({ questions }) {
   };
 
   return (
-    <div className="my-8">
+    <div className="mt-8">
       <ToastContainer />
       <h2
         className="text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 ease-in-out hover:from-blue-500 hover:to-green-400 text-center"
       >
-        Quiz: Life on Land
+        {title}
       </h2>
 
       {/* Progress Bar */}
@@ -120,7 +120,7 @@ function QuizSection({ questions }) {
               <h3 className="text-2xl font-bold mb-4">Quiz Results</h3>
               <div className="flex flex-wrap -mx-2">
                 {questions.map((q, idx) => (
-                  <div key={idx} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+                  <div key={idx} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-2">
                     <div
                       className={`p-4 rounded-lg shadow-md ${
                         selectedAnswers[idx] === q.correctAnswer

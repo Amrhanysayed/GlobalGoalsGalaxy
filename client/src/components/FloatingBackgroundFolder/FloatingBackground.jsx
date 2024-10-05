@@ -106,7 +106,7 @@ const FloatingBackground = ({ children }) => {
   }, []);
 
   return (
-    <div className="relative w-full h-[101vh] overflow-hidden bg-white">
+    <div className="relative w-full h-[111vh] overflow-hidden bg-white">
       {/* Floating Images */}
       {selectedMode &&
         selectedMode.images.map((image, index) => (

@@ -14,7 +14,7 @@ const LevelMap = () => {
     },
     {
       level: 2,
-      name: 'Water',
+      name: 'Health',
       color: 'bg-blue-500',
       objective: 'Dive deep into the ocean and discover the sunken treasure.',
     },

@@ -11,34 +11,49 @@ function Level2() {
   const [currentPage, setCurrentPage] = useState(0);
 
   const pages = [
-    // Level 1 Video
+    // Level 2 Video
     <VideoSection
-      videoUrl="https://www.youtube.com/watch?v=7YAMHn1qZLs"
+      videoUrl="https://www.youtube.com/watch?v=_p_KD5DKiFg"
       videoWidth={800}
       videoHeight={400}
-      title="Life On Land"
+      title="SDG 3 Good Health"
     />,
-    // Level 1 Quiz Questions
+    // Level 2 Quiz Questions
     <QuizSection
+      title={"Quiz SDG 3: Good Health"}
       questions={[
         {
-          question: 'What is biodiversity?',
-          options: ['Option A', 'Option B', 'Option C', 'Option D'],
-          correctAnswer: 0,
-        },
-        {
-          question: 'How can we protect forests?',
-          options: ['Option A', 'Option B', 'Option C', 'Option D'],
+          question: 'What is the primary aim of Goal 3 - Good Health and Well-being?',
+          options: ['To promote technological advancements in healthcare', 
+            'To ensure healthy lives and promote well-being for all at all ages', 
+            'To increase the number of hospitals worldwide', 
+            'To reduce healthcare costs for governments'],
           correctAnswer: 1,
         },
         {
-            question: 'How can we protect forests?',
-            options: ['Option A', 'Option B', 'Option C', 'Option D'],
-            correctAnswer: 1,
+          question: 'Which of the following is NOT listed as a benefit of Good Health and Well-being?',
+          options: [
+            'Better life', 
+            'Economic development', 
+            'Reducing poverty', 
+            'Increasing population growth'],
+          correctAnswer: 3,
         },
         {
-            question: 'How can we protect forests?',
-            options: ['Option A', 'Option B', 'Option C', 'Option D'],
+            question: 'Which of the following diseases is categorized as a communicable disease mentioned in the Video?',
+            options: ['Heart disease',
+               'Diabetes',
+               'Malaria',
+               'Cancer'],
+            correctAnswer: 2,
+        },
+        {
+            question: 'How did the COVID-19 pandemic highlight the importance of Goal 3?',
+            options: [
+                'By increasing global economic growth',
+                'By demonstrating the need for strong health systems',
+                'By reducing the need for vaccinations', 
+                'By eliminating non-communicable diseases'],
             correctAnswer: 1,
         },
       ]}
@@ -65,7 +80,7 @@ function Level2() {
       <LayoutNavBar/>
       {/* Wrap the entire content inside FloatingBackground */}
       <FloatingBackground>
-        <div className="h-full flex flex-col justify-center items-center  ">
+        <div className="h-full flex flex-col justify-center items-center">
           <div className="p-0 m-0 w-full flex flex-col justify-center items-center">
             {pages[currentPage]}
           </div>
