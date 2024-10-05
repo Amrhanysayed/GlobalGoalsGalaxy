@@ -6,6 +6,8 @@ import ActivitySection from '../components/ActivitySection';
 import Navigation from '../components/Navigation';
 import FloatingBackground from '../components/FloatingBackgroundFolder/FloatingBackground';
 
+import LayoutNavBar from '../components/LayOutNavBar';
+
 function Level1() {
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -61,7 +63,7 @@ function Level1() {
 
   return (
     <>
-      <NavBarS />
+      <LayoutNavBar/>
       {/* Wrap the entire content inside FloatingBackground */}
       <FloatingBackground>
         <div className="h-full flex flex-col justify-center items-center  ">

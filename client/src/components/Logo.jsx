@@ -8,8 +8,7 @@ import { NavLink } from 'react-router-dom'
 
     <NavLink to="/">
         
-        {/* <img src=    /> */}
-        <p>LOGO</p>
+        <img src="./src/images/logo.jpg"    alt="Logo" className="h-16 w-16 mr-2"  />
     </NavLink>
   )
 }
