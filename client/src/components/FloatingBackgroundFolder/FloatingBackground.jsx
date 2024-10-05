@@ -1,3 +1,4 @@
+// FloatingBackground.js
 import React, { useState, useEffect } from 'react';
 import './FloatingBackground.css'; // Import the CSS for the animation
 
@@ -10,7 +11,7 @@ import img5 from '../../assets/gif5.gif';
 import img6 from '../../assets/gif6.gif';
 import img7 from '../../assets/img0.png';
 
-const FloatingBackground = ({ children }) => {
+const FloatingBackground = ({ children, height = 'h-[111vh]' }) => {
   // Array of imported image variables
   const imageUrls = [img0, img1, img2, img3, img4, img5, img6, img7];
 
@@ -39,7 +40,6 @@ const FloatingBackground = ({ children }) => {
           width: 80,
           height: 80,
         },
-        
       ],
     },
     {
@@ -65,7 +65,6 @@ const FloatingBackground = ({ children }) => {
           width: 80,
           height: 80,
         },
-        
       ],
     },
     {
@@ -91,7 +90,6 @@ const FloatingBackground = ({ children }) => {
           width: 80,
           height: 80,
         },
-        
       ],
     },
   ];
@@ -106,7 +104,7 @@ const FloatingBackground = ({ children }) => {
   }, []);
 
   return (
-    <div className="relative w-full h-[111vh] overflow-hidden bg-white">
+    <div className={`relative w-full ${height} overflow-hidden bg-white`}>
       {/* Floating Images */}
       {selectedMode &&
         selectedMode.images.map((image, index) => (

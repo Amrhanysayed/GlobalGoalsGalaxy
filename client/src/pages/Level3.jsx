@@ -2,10 +2,9 @@ import React from 'react';
 import LayoutNavBar from '../components/LayoutNavBar';
 import FloatingBackground from '../components/FloatingBackgroundFolder/FloatingBackground';
 import Navigation from '../components/Navigation';
-import CertificateImage from '../assets/Cert.png'; // 📌 Adjust the path to your certificate image
+import CertificateImage from '../assets/Cert.png'; 
 
 function Level3() {
-  // 📌 Adjust the article content and project ideas below
   const projectIdeas = [
     {
       title: 'Sustainable Gardening App',
@@ -27,6 +26,16 @@ function Level3() {
     },
   ];
 
+  const recommendedTools = [
+    {
+      name: 'NASA Worldview',
+      link: 'https://worldview.earthdata.nasa.gov/',
+      description:
+        'An interactive interface that allows users to visualize satellite data for real-time Earth observation. Ideal for monitoring environmental changes, natural disasters, and climate phenomena.',
+    },
+    // You can add more tools here in the future
+  ];
+
   const resources = [
     {
       name: 'NASA ARSET: Overview of SDG 15',
@@ -43,7 +52,7 @@ function Level3() {
     <>
       <LayoutNavBar />
       {/* Wrap the entire content inside FloatingBackground */}
-      <FloatingBackground>
+      <FloatingBackground height='140vh'>
         <div className="min-h-screen flex flex-col justify-center items-center p-4">
           {/* Main Content Container */}
           <div className="w-full max-w-6xl bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg p-8 flex flex-col lg:flex-row">
@@ -69,6 +78,26 @@ function Level3() {
                 ))}
               </article>
 
+              {/* 📌 New Section: Recommended Tools */}
+              <div className="mt-8">
+                <h2 className="text-3xl font-bold mb-4 text-gray-800">Recommended Tools</h2>
+                <ul className="list-disc list-inside space-y-4">
+                  {recommendedTools.map((tool, index) => (
+                    <li key={index}>
+                      <a
+                        href={tool.link}
+                        className="text-blue-500 underline text-lg font-semibold"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {tool.name}
+                      </a>
+                      <p className="mt-1 text-gray-600">{tool.description}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               {/* 📌 New Section: Resources */}
               <div className="mt-8">
                 <h2 className="text-3xl font-bold mb-4 text-gray-800">Check Out these Resources:</h2>
@@ -87,7 +116,6 @@ function Level3() {
                   ))}
                 </ul>
               </div>
-              {/* 📌 End of Resources Section */}
             </div>
 
             {/* Right Column: Certificate Section */}
@@ -103,12 +131,12 @@ function Level3() {
 
           {/* Navigation Buttons (Optional) */}
           <Navigation
-            // 📌 Customize these handlers or remove them if not needed
             onNext={() => {/* Handle next action */}}
             onPrev={() => {/* Handle previous action */}}
-            currentPage={0} // 📌 Adjust as needed
-            totalPages={1} // 📌 Adjust as needed
+            currentPage={0} 
+            totalPages={1} 
           />
+          
         </div>
       </FloatingBackground>
     </>
