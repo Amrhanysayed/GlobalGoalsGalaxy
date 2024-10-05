@@ -58,19 +58,39 @@ function QuizSection({ questions }) {
       <div className="relative flex justify-center items-center mt-6 mb-4 space-x-4">
         {questions.map((_, idx) => (
           <React.Fragment key={idx}>
-            <div
-              className={`relative z-10 w-10 h-10 rounded-full border-4 transition-colors duration-500 ${
-                isQuizSubmitted
-                  ? selectedAnswers[idx] === questions[idx].correctAnswer
-                    ? 'bg-green-500 border-green-500' // Correct answer
-                    : 'bg-red-500 border-red-500' // Wrong answer
-                  : selectedAnswers[idx] !== null
-                  ? 'bg-gray-500 border-gray-500' // Answered
-                  : 'bg-white border-gray-300' // Unanswered
-              } flex items-center justify-center`}
-            >
-              <span className="text-white">{idx + 1}</span>
-            </div>
+            {idx === currentQuestionIndex ? (
+              // Current question circle with gradient border
+              <div className="relative z-10 w-10 h-10 p-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full">
+                <div
+                  className={`w-full h-full rounded-full flex items-center justify-center ${
+                    isQuizSubmitted
+                      ? selectedAnswers[idx] === questions[idx].correctAnswer
+                        ? 'bg-green-500' // Correct answer
+                        : 'bg-red-500' // Wrong answer
+                      : selectedAnswers[idx] !== null
+                      ? 'bg-slate-400' // Answered
+                      : 'bg-slate-200' // Unanswered
+                  }`}
+                >
+                  <span className="text-white">{idx + 1}</span>
+                </div>
+              </div>
+            ) : (
+              // Other circles
+              <div
+                className={`relative z-10 w-10 h-10 rounded-full border-4 transition-colors duration-500 ${
+                  isQuizSubmitted
+                    ? selectedAnswers[idx] === questions[idx].correctAnswer
+                      ? 'bg-green-500 border-green-500' // Correct answer
+                      : 'bg-red-500 border-red-500' // Wrong answer
+                    : selectedAnswers[idx] !== null
+                    ? 'bg-gray-700 border-gray-500' // Answered
+                    : 'bg-slate-300 border-gray-300' // Unanswered
+                } flex items-center justify-center`}
+              >
+                <span className="text-white">{idx + 1}</span>
+              </div>
+            )}
 
             {/* Connecting line between circles, but not after the last circle */}
             {idx !== questions.length - 1 && (
@@ -112,8 +132,7 @@ function QuizSection({ questions }) {
                         Question {idx + 1}: {q.question}
                       </p>
                       <p>
-                        <strong>Your Answer:</strong>{' '}
-                        {q.options[selectedAnswers[idx]]}
+                        <strong>Your Answer:</strong> {q.options[selectedAnswers[idx]]}
                       </p>
                       <p>
                         <strong>Correct Answer:</strong> {q.options[q.correctAnswer]}
@@ -139,16 +158,16 @@ function QuizSection({ questions }) {
                 onClick={handlePrevQuestion}
               >
                 <FaArrowLeft className="mr-2" />
-                Previous
+                Previous Q
               </button>
             )}
 
             {currentQuestionIndex < questions.length - 1 && (
               <button
-                className="btn btn-secondary mb-4 flex items-center"
+                className="btn btn-secondary bg-orange-600 mb-4 flex items-center border-0 hover:bg-orange-700"
                 onClick={handleNextQuestion}
               >
-                Next
+                Next Q
                 <FaArrowRight className="ml-2" />
               </button>
             )}

@@ -4,8 +4,8 @@ import { FaExpand, FaCompress } from 'react-icons/fa';
 function ActivitySection({
   activityName,
   activityUrl,
-  enlargedWidth = 1200,
-  enlargedHeight = 800,
+  enlargedWidth = 1000,
+  enlargedHeight = (1000 * 9) / 16,
 }) {
   const [isEnlarged, setIsEnlarged] = useState(false);
 
@@ -14,7 +14,7 @@ function ActivitySection({
   };
 
   // Define normal and enlarged dimensions
-  const normalDimensions = { width: '854px', height: '480px' };
+  const normalDimensions = { width: '854px', height: `${(854 * 9 / 16)}px`} ;
   const enlargedDimensions = {
     width: `${enlargedWidth}px`,
     height: `${enlargedHeight}px`,
@@ -22,8 +22,12 @@ function ActivitySection({
 
   return (
     <div className="activity-section text-center">
-      <h1 className="text-3xl font-bold mb-4">{activityName}</h1>
-      <div className="iframe-container relative inline-block">
+      <h2
+        className="text-4xl font-bold bg-gradient-to-r my-4 py-2 from-green-400 to-blue-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 ease-in-out hover:from-blue-500 hover:to-green-400 text-center"
+      >
+        {activityName}
+      </h2>    
+        <div className="iframe-container relative inline-block">
         <iframe
           src={activityUrl}
           allow="fullscreen"
