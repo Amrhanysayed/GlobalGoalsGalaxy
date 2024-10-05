@@ -51,7 +51,7 @@ function Level3() {
   return (
     <>
       <LayoutNavBar />
-      {/* Wrap the entire content inside FloatingBackground */}
+      {/* Wrap the entire content inside FloatingBackground with custom height */}
       <FloatingBackground height='140vh'>
         <div className="min-h-screen flex flex-col justify-center items-center p-4">
           {/* Main Content Container */}
@@ -98,6 +98,21 @@ function Level3() {
                 </ul>
               </div>
 
+              {/* 📌 New Section: Become a Volunteer */}
+              <div className="mt-8">
+                <h2 className="text-3xl font-bold mb-4 text-gray-800">Become a Volunteer</h2>
+                <p className="text-gray-700 mb-4">
+                  Are you passionate about education and community development? Join us as a volunteer to enrich our site content and gain the opportunity to become a virtual teacher for our interactive classes. Your contribution can make a significant difference in creating a vibrant learning environment for students worldwide.
+                </p>
+                <a
+                  href="/signup" // Update this path to your actual sign-up page
+                  className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Sign Up Now
+                </a>
+              </div>
+              {/* 📌 End of New Section */}
+
               {/* 📌 New Section: Resources */}
               <div className="mt-8">
                 <h2 className="text-3xl font-bold mb-4 text-gray-800">Check Out these Resources:</h2>
@@ -116,6 +131,7 @@ function Level3() {
                   ))}
                 </ul>
               </div>
+              {/* 📌 End of Resources Section */}
             </div>
 
             {/* Right Column: Certificate Section */}
@@ -124,7 +140,7 @@ function Level3() {
               <img
                 src={CertificateImage}
                 alt="Certificate"
-                className="w-[1000px] h-[407px] rounded-lg shadow-md object-cover" // 📌 Adjusted image size to 1000px x 707px
+                className="w-[1000px] h-[407px] rounded-lg shadow-md object-cover" // 📌 Adjusted image size to 1000px x 407px
               />
             </div>
           </div>
