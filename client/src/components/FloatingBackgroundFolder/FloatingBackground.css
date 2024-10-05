@@ -1,23 +1,68 @@
-@keyframes float {
+@keyframes floatY {
   0% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px); /* Increase for a more visible floating effect */
+    transform: translateY(-20px);
   }
   100% {
     transform: translateY(0px);
   }
 }
 
+@keyframes floatX {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes floatXY {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(20px, -10px);
+  }
+  50% {
+    transform: translate(0px, -20px);
+  }
+  75% {
+    transform: translate(-20px, -10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
 .floating-image {
   position: absolute;
-  animation: float 4s ease-in-out infinite; /* Reduced duration for faster effect */
-  opacity: 0.8;
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 0.7; /* Set opacity to 70% */
 }
 
 .floating-image:hover {
   opacity: 1;
   transform: scale(1.05);
-  transition: transform 0.3s ease; /* Add smooth transition for hover effect */
+  transition: transform 0.3s ease;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.floating-background::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.floating-background {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

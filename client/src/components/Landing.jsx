@@ -24,7 +24,7 @@ const Landing = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="font-bold text-5xl md:text-7xl text-blue-600 mb-4">Global Goals Galaxy</h1>
+          <h1 className="font-bold text-5xl md:text-7xl text-blue-600 mb-4 py-6 ">Global Goals Galaxy</h1>
           <p className="font-semibold text-xl md:text-2xl text-gray-700">Empowering students and educators for a better future</p>
         </motion.div>
 
