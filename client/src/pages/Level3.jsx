@@ -2,9 +2,17 @@ import React from 'react';
 import LayoutNavBar from '../components/LayoutNavBar';
 import FloatingBackground from '../components/FloatingBackgroundFolder/FloatingBackground';
 import Navigation from '../components/Navigation';
-import CertificateImage from '../assets/Cert.png'; 
+import CertificateImage from '../assets/Cert.png';
+import { useNavigate } from 'react-router-dom';
+
 
 function Level3() {
+  const navigate = useNavigate();
+
+  const handleSignUp = () => {
+    navigate('/signup'); // Ensure this route exists in your React Router setup
+  };
+
   const projectIdeas = [
     {
       title: 'Sustainable Gardening App',
@@ -104,12 +112,12 @@ function Level3() {
                 <p className="text-gray-700 mb-4">
                   Are you passionate about education and community development? Join us as a volunteer to enrich our site content and gain the opportunity to become a virtual teacher for our interactive classes. Your contribution can make a significant difference in creating a vibrant learning environment for students worldwide.
                 </p>
-                <a
-                  href="/signup"
+                <button
+                  onClick={handleSignUp}
                   className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition-colors duration-300"
                 >
-                  SignUp Now
-                </a>
+                  Sign Up Now
+                </button>
               </div>
               {/* 📌 End of New Section */}
 
