@@ -9,11 +9,15 @@ function LayoutNavBar() {
         {/* Left Section: Logo */}
         <div className="flex items-center flex-1">
           <Link to="/">
-            <img
-              src="../../src/images/logo.jpg"
-              alt="Logo"
-              className="h-16 w-16 mr-2"
-            />
+          <a href="https://ibb.co/KXf4Pxs">
+  <img
+    src="https://i.ibb.co/nbYdGM1/logo.jpg"
+    alt="logo"
+    border="0"
+    className="h-16 w-16 mr-2"
+  />
+</a>
+
           </Link>
           <Link to="/" className="font-bold text-xl text-slate-900">
             Global Goals Galaxy

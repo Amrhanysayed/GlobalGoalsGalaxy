@@ -59,10 +59,9 @@ function Level2() {
       ]}
     />,
     // Activity Section with GDevelop activity
-    // TODO RENAME THE ACTIVITY NAME
 <ActivitySection
-  activityName="Protecting Wildlife Activity"
-  activityUrl="https://anas-ibrahem.github.io/GAME/"
+  activityName="Health Hunter Game"
+  activityUrl="https://anas-ibrahem.github.io/Game2/"
 />,
 
   ];

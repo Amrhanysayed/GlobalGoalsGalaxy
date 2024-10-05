@@ -69,9 +69,8 @@ function Level1() {
       ]}
     />,
     // Activity Section with GDevelop activity
-    // TODO RENAME THE ACTIVITY NAME
 <ActivitySection
-  activityName="Protecting Wildlife Activity"
+  activityName="Global City Decision Making"
   activityUrl="https://anas-ibrahem.github.io/GAME/"
 />,
 
