@@ -105,7 +105,7 @@ function Level3() {
                   Are you passionate about education and community development? Join us as a volunteer to enrich our site content and gain the opportunity to become a virtual teacher for our interactive classes. Your contribution can make a significant difference in creating a vibrant learning environment for students worldwide.
                 </p>
                 <a
-                  href="/signup" // Update this path to your actual sign-up page
+                  href="/signup"
                   className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition-colors duration-300"
                 >
                   SignUp Now
