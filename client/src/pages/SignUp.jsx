@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import FloatingBackground from '../components/FloatingBackgroundFolder/FloatingBackground';
 import './Login.css'; // Import the CSS file where the glass effect styles are defined
 
 function SignUp() {
@@ -8,7 +9,7 @@ function SignUp() {
     username: '',
     password: '',
     confirmPassword: '',
-    UserType: ''
+    schoolType: '' // Changed from 'UserType' to 'schoolType' to match the form
   });
   const [error, setError] = useState('');
 
@@ -36,12 +37,8 @@ function SignUp() {
       setError('Passwords do not match!');
       return;
     }
-    if (formData.subject === '') {
-      setError('Please select a subject!');
-      return;
-    }
-    if (formData.schoolType === '') {
-      setError('Please select a school type!');
+    if (formData.schoolType === '') { // Updated from 'subject' and 'schoolType' to match formData
+      setError('Please select a user type!');
       return;
     }
 
@@ -53,19 +50,19 @@ function SignUp() {
       username: '',
       password: '',
       confirmPassword: '',
-      UserType: ''
+      schoolType: ''
     });
   };
 
   return (
-    <main className="bg-slate-100 h-screen ">
-      <div className="h-screen flex items-center justify-center bg-cover bg-center">
-        <div className="glass-effect m-2 p-4 rounded-lg w-full max-w-md shadow-2xl shadow-yellow-300 z-10">
-          <h1 className="text-center text-white font-bold text-4xl mb-6 pt-3 ">SignUp</h1>
+    <FloatingBackground>
+      <main className="relative z-10 flex items-center justify-center min-h-screen p-4">
+        <div className="glass-effect m-2 p-6 rounded-lg w-full max-w-md ">
+          <h1 className="text-center text-white font-bold text-4xl mb-6">Sign Up</h1>
           <form className="space-y-4" onSubmit={handleSubmit}>
             {/* Username */}
             <div>
-              <label htmlFor="username" className="block text-slate-100  mb-1">Username</label>
+              <label htmlFor="username" className="block text-slate-100 mb-1">Username</label>
               <input
                 type="text"
                 id="username"
@@ -80,7 +77,7 @@ function SignUp() {
 
             {/* Password */}
             <div>
-              <label htmlFor="password" className="block text-slate-100  mb-1">Password</label>
+              <label htmlFor="password" className="block text-slate-100 mb-1">Password</label>
               <input
                 type="password"
                 id="password"
@@ -95,7 +92,7 @@ function SignUp() {
 
             {/* Confirm Password */}
             <div>
-              <label htmlFor="confirmPassword" className="block text-slate-100  mb-1">Confirm Password</label>
+              <label htmlFor="confirmPassword" className="block text-slate-100 mb-1">Confirm Password</label>
               <input
                 type="password"
                 id="confirmPassword"
@@ -108,11 +105,9 @@ function SignUp() {
               />
             </div>
 
-      
-
             {/* Select User Type */}
             <div>
-              <label htmlFor="schoolType" className="block text-slate-100  mb-1">Select User Type</label>
+              <label htmlFor="schoolType" className="block text-slate-100 mb-1">Select User Type</label>
               <select
                 id="schoolType"
                 name="schoolType"
@@ -121,7 +116,7 @@ function SignUp() {
                 className="w-full p-2 rounded border border-gray-600 bg-gray-800 text-white focus:outline-none focus:border-blue-500"
                 required
               >
-                <option value="" disabled>Select User type</option>
+                <option value="" disabled>Select User Type</option>
                 <option value="Teacher">Teacher</option>
                 <option value="Parent">Parent</option>
                 <option value="Volunteer">Volunteer</option>
@@ -157,15 +152,15 @@ function SignUp() {
             </button>
           </div>
 
-          <p className="text-center  mt-4">
+          <p className="text-center mt-4 text-slate-100">
             Already have an account?
             <NavLink to="../login">
               <span className="mx-2 text-slate-600 hover:underline">Login</span>
             </NavLink>
           </p>
         </div>
-      </div>
-    </main>
+      </main>
+    </FloatingBackground>
   );
 }
 

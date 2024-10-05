@@ -3,6 +3,7 @@ import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Login.css'; // Import the CSS file where the glass effect styles are defined
+import FloatingBackground from '../components/FloatingBackgroundFolder/FloatingBackground';
 
 function Login() {
 
@@ -27,9 +28,10 @@ function Login() {
   }
 
   return (
-    <main className="bg-slate-100">
+    <FloatingBackground>
+    <main>
       <div className="min-h-screen flex items-center justify-center bg-cover bg-center">
-        <div className="glass-effect p-8 rounded-lg w-full max-w-sm shadow-2xl shadow-green-400 z-10">
+        <div className="glass-effect p-8 rounded-lg w-full max-w-sm">
           <h1 className="text-center text-white font-bold text-4xl mb-6">Login</h1>
           <NavLink to="../layout" className="block text-center text-slate-100 hover:underline">ToApp <span>beta version</span></NavLink>
           <form className="space-y-4" onSubmit={handleSubmit}>
@@ -86,7 +88,7 @@ function Login() {
             </button>
           </div>
 
-          <p className="text-center  mt-4">
+          <p className="text-center  mt-4 text-slate-100">
             Don't have an account?
             <NavLink to="../signup">
               <span className="mx-2 text-slate-600 hover:underline">Sign Up</span>
@@ -94,7 +96,8 @@ function Login() {
           </p>
         </div>
       </div>
-    </main>
+      </main>
+    </FloatingBackground>
   );
 }
 
