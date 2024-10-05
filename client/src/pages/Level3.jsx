@@ -108,7 +108,7 @@ function Level3() {
                   href="/signup" // Update this path to your actual sign-up page
                   className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition-colors duration-300"
                 >
-                  Sign Up Now
+                  SignUp Now
                 </a>
               </div>
               {/* 📌 End of New Section */}
