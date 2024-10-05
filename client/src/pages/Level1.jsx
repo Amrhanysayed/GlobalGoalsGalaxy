@@ -6,7 +6,7 @@ import ActivitySection from '../components/ActivitySection';
 import Navigation from '../components/Navigation';
 import FloatingBackground from '../components/FloatingBackgroundFolder/FloatingBackground';
 
-import LayoutNavBar from '../components/LayOutNavBar';
+import LayoutNavBar from '../components/LayoutNavBar';
 
 function Level1() {
   const [currentPage, setCurrentPage] = useState(0);

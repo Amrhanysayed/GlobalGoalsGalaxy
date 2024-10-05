@@ -5,8 +5,9 @@ import QuizSection from '../components/QuizSection';
 import ActivitySection from '../components/ActivitySection';
 import Navigation from '../components/Navigation';
 import FloatingBackground from '../components/FloatingBackgroundFolder/FloatingBackground';
+import LayoutNavBar from '../components/LayoutNavBar';
 
-function Level1() {
+function Level3() {
   const [currentPage, setCurrentPage] = useState(0);
 
   const pages = [
@@ -61,7 +62,7 @@ function Level1() {
 
   return (
     <>
-      <NavBarS />
+      <LayoutNavBar/>
       {/* Wrap the entire content inside FloatingBackground */}
       <FloatingBackground>
         <div className="h-full flex flex-col justify-center items-center  ">
@@ -80,4 +81,4 @@ function Level1() {
   );
 }
 
-export default Level1;
+export default Level3;
