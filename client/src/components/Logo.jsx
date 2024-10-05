@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom'
     return (
     <NavLink to="/">
         
-        <img src="./src/images/logo.jpg"    alt="Logo" className="h-16 w-16 mr-2"  />
-    </NavLink>
+        <a href="https://ibb.co/KXf4Pxs"><img src="https://i.ibb.co/nbYdGM1/logo.jpg" alt="logo" border="0" className="h-16 w-16 mr-2" /></a>
+     </NavLink>
   )
 }
  export default Logo; 
